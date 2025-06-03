@@ -14,7 +14,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ------------------------------------------------------------------------------------------------------------------------
         KC_Q, KC_W, KC_E, KC_R, KC_T,                                          					KC_Y, KC_U, KC_I, KC_O, KC_P,
         // ------------------------------------------------------------------------------------------------------------------------
-        KC_A, MT(MOD_LCTL, KC_S), MT(MOD_LALT, KC_D), MT(MOD_LGUI, KC_F), KC_G,              	KC_H, MT(MOD_RGUI, KC_J), MT(MOD_RALT, KC_K), MT(MOD_LCTL, KC_L), KC_SCLN,
+        KC_A, MT(MOD_LCTL, KC_S), MT(MOD_LALT, KC_D), MT(MOD_LGUI, KC_F), KC_G,              	KC_H, MT(MOD_RGUI, KC_J), MT(MOD_RALT, KC_K), MT(MOD_LCTL, KC_L), KC_BSPC,
         // ------------------------------------------------------------------------------------------------------------------------
         KC_Z, KC_X, KC_C, KC_V, KC_B,                                          					KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
         // ------------------------------------------------------------------------------------------------------------------------
@@ -23,22 +23,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // punctuation layer
     [1] = LAYOUT_split_3x5_2(
         // ------------------------------------------------------------------------------------------------------------------------
-        KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                                  KC_CIRC, KC_AMPR, KC_ASTR, KC_PLUS, KC_BSPC,
+        KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                                  KC_CIRC, KC_AMPR, KC_ASTR, KC_PLUS, LCTL(KC_BSPC),
         // ------------------------------------------------------------------------------------------------------------------------
-        KC_TAB, KC_GRV, KC_QUOT, KC_DQUO, KC_EXLM,   							KC_BSLS, KC_LCBR,  KC_LPRN, KC_LBRC, KC_LABK,
+        KC_TAB, KC_GRV, KC_QUOT, KC_DQUO, KC_PLUS,   							KC_SCLN, KC_LCBR,  KC_LPRN, KC_LBRC, KC_BSPC,
         // ------------------------------------------------------------------------------------------------------------------------
-        KC_TILD, KC_UNDS, KC_MINUS, KC_COLN, KC_EQL,                            KC_PIPE, KC_RCBR, KC_RPRN, KC_RBRC, KC_RABK,
+        KC_TILD, KC_UNDS, KC_MINUS, KC_COLN, KC_EQL,                            KC_PIPE, KC_RCBR, KC_RPRN, KC_RBRC, KC_BSLS,
         // ------------------------------------------------------------------------------------------------------------------------
                                       TO(0), TO(3),                             MT(MOD_LSFT, KC_ENT), TO(2)),
 
     // arrows key layer
     [2] = LAYOUT_split_3x5_2(
         // ------------------------------------------------------------------------------------------------------------------------
-        KC_TAB, KC_NO, KC_NO, KC_NO, KC_NO,                                          KC_BRMD, KC_BRMU, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, KC_BSPC,
+        RALT(KC_TAB), KC_NO, KC_NO, KC_NO, KC_NO,                                          KC_BRMD, KC_BRMU, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, KC_NO,
         // ------------------------------------------------------------------------------------------------------------------------
-        KC_TAB, KC_NO, MO(5), MO(4), TO(6),                                        KC_LEFT,  KC_DOWN, KC_UP, KC_RIGHT, KC_SCLN,
+        KC_TAB, KC_NO, MO(5), MO(4), TO(6),                                        KC_LEFT,  KC_DOWN, KC_UP, KC_RIGHT, KC_NO,
         // ------------------------------------------------------------------------------------------------------------------------
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V),  TO(7),                                KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO,
         // ------------------------------------------------------------------------------------------------------------------------
                                TO(0), KC_SPC,                             MT(MOD_LSFT, KC_ENT), TO(1)),
 
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ------------------------------------------------------------------------------------------------------------------------
         KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                                          KC_CIRC, KC_AMPR, KC_ASTR, KC_PLUS, KC_BSPC,
         // ------------------------------------------------------------------------------------------------------------------------
-        KC_1, KC_2, MT(MOD_LALT, KC_3), MT(MOD_LGUI, KC_4), KC_5,                    KC_6, MT(MOD_LGUI, KC_7), MT(MOD_LALT, KC_8), KC_9, KC_0,
+        KC_1, MT(MOD_LCTL, KC_2), MT(MOD_LALT, KC_3), MT(MOD_LGUI, KC_4), KC_5,                    KC_6, MT(MOD_LGUI, KC_7), MT(MOD_LALT, KC_8), MT(MOD_LCTL, KC_9), KC_0,
         // ------------------------------------------------------------------------------------------------------------------------
         KC_TILD, KC_UNDS, KC_MINUS, KC_COLN, KC_EQL,                                          KC_PIPE, KC_EQL, KC_COMM, KC_DOT, KC_SLSH,
         // ------------------------------------------------------------------------------------------------------------------------
